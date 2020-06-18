@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.yang.entity">
+	<class name="Customer" table="tbl_customer">
+		<id name="custId" type="java.lang.Long">
+			<column name="cust_id" sql-type="bigint(30)" not-null="true" unique="true">
+				<comment>主键ID</comment>
+			</column>
+			<generator class="native"></generator>
+		</id>
+		<property name="custName" type="java.lang.String">
+			<column name="cust_name" sql-type="varchar(200)">
+				<comment>客户姓名</comment>
+			</column>
+		</property>
+		<property name="custSource" type="java.lang.String">
+			<column name="cust_source" sql-type="varchar(200)">
+				<comment>客户来源</comment>
+			</column>
+		</property>
+		<property name="custIndustry" type="java.lang.String">
+			<column name="cust_industry" sql-type="varchar(200)">
+				<comment>客户职业</comment>
+			</column>
+		</property>
+		<property name="custLevel" type="java.lang.String">
+			<column name="cust_level" sql-type="varchar(50)">
+				<comment>客户等级</comment>
+			</column>
+		</property>
+		<property name="custAddress" type="java.lang.String">
+			<column name="cust_address" sql-type="varchar(200)">
+				<comment>客户住址</comment>
+			</column>
+		</property>
+		<property name="custPhone" type="java.lang.String">
+			<column name="cust_phone" sql-type="varchar(50)">
+				<comment>客户电话</comment>
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>
